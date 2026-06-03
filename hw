@@ -63,7 +63,7 @@ class Recipe:
 #1.3
 class ShopingList:
     def __int__(self, items):
-        self._item = []
+        self._items = []
     
     def add_recipe(recipe: Recipe, portions: float):
         if portions <= 0:
@@ -81,6 +81,24 @@ class ShopingList:
                 b.append(i)
         self._items = b
 
+
+
+#1.4
+class DietaryRecipe:
+    def __init__(self, title: str, diet_type: str, ingridients: list[Ingridient]):
+        super().__init__(title, ingridients)
+        self.diet_type = diet_type
+
+    def scale(ratio: float):
+        recipe_another = super().scale(ratio)
+        rat = recipe_another.title
+        sdt = self.diet_type
+        rai = recipe_another.ingridients
+        return DietaryRecipe(rat, sdt, rai)
+    
+    def __str__(self):
+        par_name = super().__str__()
+        return f'[{self.diet_type}] {par_name}'
 
 
 
