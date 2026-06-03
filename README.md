@@ -5,3 +5,4 @@ cd <папка>
 pip install -r requirements.txt
 
 # Описание проекта:
+пупупу
