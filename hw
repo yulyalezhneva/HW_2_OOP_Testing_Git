@@ -60,6 +60,29 @@ class Recipe:
     
 
     
+#1.3
+class ShopingList:
+    def __int__(self, items):
+        self._item = []
+    
+    def add_recipe(recipe: Recipe, portions: float):
+        if portions <= 0:
+            raise ValueError("Количество порций должно быть положительным")
+        
+        a = recipe.scale(portions)
+
+        for i in a.ingridients:
+            self._items.append((i, recipe.title))
+
+    def remove_recipe(self, title: str):
+        b=[]
+        for i in self._items:
+            if i[1]!=title:
+                b.append(i)
+        self._items = b
+
+
+
 
 
 
